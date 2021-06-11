@@ -348,10 +348,7 @@ class LoadStreams:  # multiple IP or RTSP cameras
 '''
 def img2label_paths(img_paths):    # 由图片路径得到标签路径
     # Define label paths as a function of image paths
-    
-    ../input/glovedetect/glovedetect/glovedetect/train/1_images
-    ./data/labels
-    sa, sb = os.sep + 'images' + os.sep, os.sep + 'labels' + os.sep  # /images/, /labels/ substrings
+    sa, sb = '../input/glovedetect/glovedetect/glovedetect/train/1_images', './data/labels'  # /images/, /labels/ substrings
     return ['txt'.join(x.replace(sa, sb, 1).rsplit(x.split('.')[-1], 1)) for x in img_paths]     # train.txt或val.txt中每一行中将images转变为labels,将后缀转为txt
 
 '''
